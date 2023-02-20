@@ -21,8 +21,8 @@
     <script>
       function ambilNilai()
       {
-        nilaiSatu = parseInt(document.getElementById('input1').value);
-        nilaiDua = parseInt(document.getElementById('input2').value);
+        nilaiSatu = document.getElementById('input1').value;
+        nilaiDua = document.getElementById('input2').value;
         if (nilaiSatu == '' || nilaiDua == '')
         {
           return alert('Nilai harus terisi');
@@ -44,7 +44,7 @@
         let prosesTambah = 0;
         for (let a = 0; a < nilai.length; a++)
         {
-          prosesTambah += nilai[a];
+          prosesTambah += parseInt(nilai[a]);
         }
         // console.log(prosesTambah);
         return printHasil(prosesTambah);
